@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--Set DIR="RTL" for right to left-->
+<html xmlns="http://www.w3.org/1999/xhtml" DIR="">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0"/>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+        <title>Demo course to test LMS Communication</title>
+        <!-- Core Style Starts-->
+    </head>
+
+    <body scroll="no" onload="" class="corebg">
+        
+        <div class="center_wrapper" id="cent_wrap">
+            <button id="send_values_to_LMS">Send Values to LMS</button>
+        </div>
+        
+        <script type="text/javascript" src="scripts/library/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="scripts/library/jquery-ui-1.12.1.min.js"></script>
+       
+        <script> less = { inlineJavaScript: true }; </script>
+        <script type="text/javascript" src="scripts/api_wrapper.js"></script>
+        <script type="text/javascript" src="scripts/lms_communication.js"></script>
+        <!-- Core Library Script Ends-->
+        <script type="text/javascript">
+            function isIE() {
+                var myNav = navigator.userAgent.toLowerCase();
+                return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+            }
+			
+            $(document).ready(function() {
+                $('#send_values_to_LMS').on("click", function() {
+                    var return_val = lms_communication.setValues("bookmark_screen_id", "90", "80", "completed", "susspend_data_value");
+                    if(return_val){
+                        alert("Great! Values sucessfully updated to LMS !!! " + return_val)
+                    } else {
+                        alert("There is something wrong... Values not updated to LMS !!! " + return_val)
+                    }
+                });
+            });
+            var doc = document.documentElement;
+            doc.setAttribute('data-useragent', navigator.userAgent);
+        </script>
+    </body>
+</html>

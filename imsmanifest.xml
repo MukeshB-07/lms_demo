@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<manifest identifier="MANIFEST-816d3af1-c3f9-4a27-bc2e-6e7be2c8bfd1" 
+        xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+        xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+        xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                            http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd
+                            http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>1.2</schemaversion>
+    </metadata>
+    <organizations default="ORG-d7363039-0481-4843-8d26-2699fb988f18">
+        <organization identifier="ORG-d7363039-0481-4843-8d26-2699fb988f18" structure="hierarchical">
+            <title>LMS Demo</title>
+            <item identifier="ITEM-1bbdd3f5-864d-4697-b51c-29751c052cd5" identifierref="RES-11d2c4c7-21bb-43d1-bff3-949f3a6e6422" isvisible="true">
+                <title>LMS Demo</title>
+            </item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="RES-11d2c4c7-21bb-43d1-bff3-949f3a6e6422" type="webcontent" adlcp:scormtype="sco" href="index.htm">
+            <file href="scripts/api_wrapper.js"/>
+            <file href="adlcp_rootv1p2.xsd" />
+            <file href="ims_xml.xsd" />
+            <file href="imscp_rootv1p1p2.xsd" />
+            <file href="imsmanifest.xml" />
+            <file href="imsmd_rootv1p2p1.xsd" />
+            <file href="index.htm"/>
+        </resource>
+    </resources>
+</manifest>
